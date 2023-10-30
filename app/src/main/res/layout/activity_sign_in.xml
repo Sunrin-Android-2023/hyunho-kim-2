@@ -80,14 +80,22 @@
         android:layout_height="0dp"
         android:layout_weight="1"/>
     
-    <Button
-        android:id="@+id/login"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sign_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:text="@string/log_in"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+
+        app:strokeColor="@color/dark_gray"
+        app:strokeWidth="2dp"
+        app:cornerRadius="10dp"
+
+        android:paddingVertical="10dp"
+
+        android:text="@string/sign_in"
         android:textSize="20sp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/dark_gray"/>
 
     <TextView
         android:id="@+id/sign_up"
@@ -97,8 +105,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp"
 
-        android:text="@string/sign_up"
+        android:text="@string/don_t_have_an_account"
         android:textSize="15sp"
-        android:textColor="@color/dark_gray"/>
+        android:textColor="@color/aqua"/>
 
 </LinearLayout>
