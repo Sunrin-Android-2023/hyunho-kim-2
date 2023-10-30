@@ -40,7 +40,8 @@
 
             android:hint="@string/id"
             android:textSize="20sp"
-            android:textColor="@color/light_gray"
+            android:textColorHint="@color/light_gray"
+            android:textColor="@color/dark_gray"
             android:inputType="text"/>
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -63,7 +64,8 @@
 
             android:hint="@string/nickname"
             android:textSize="20sp"
-            android:textColor="@color/light_gray"
+            android:textColorHint="@color/light_gray"
+            android:textColor="@color/dark_gray"
             android:inputType="text"/>
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -81,13 +83,14 @@
         app:startIconDrawable="@drawable/ic_lock">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_password"
+            android:id="@+id/et_pw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
             android:hint="@string/password"
             android:textSize="20sp"
-            android:textColor="@color/light_gray"
+            android:textColorHint="@color/light_gray"
+            android:textColor="@color/dark_gray"
             android:inputType="textPassword"/>
 
     </com.google.android.material.textfield.TextInputLayout>

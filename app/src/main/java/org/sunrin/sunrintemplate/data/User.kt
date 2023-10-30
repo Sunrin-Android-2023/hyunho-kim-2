@@ -1,11 +1,15 @@
 package org.sunrin.sunrintemplate.data
 
 import android.os.Parcelable
+import androidx.annotation.DrawableRes
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class User(
-    val id: String,
-    val pw: String,
-    val nickname: String
+    var id: String,
+    var pw: String,
+    var nickname: String,
+    var description: String,
+    @DrawableRes
+    var profileImg: Int
 ) : Parcelable

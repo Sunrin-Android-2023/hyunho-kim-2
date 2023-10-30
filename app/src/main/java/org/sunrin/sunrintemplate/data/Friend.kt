@@ -4,7 +4,7 @@ import androidx.annotation.DrawableRes
 
 data class Friend(
     @DrawableRes
-    val profileImg: Int,
-    val nickname: String,
-    val description: String
+    var profileImg: Int,
+    var nickname: String,
+    var description: String
 )
