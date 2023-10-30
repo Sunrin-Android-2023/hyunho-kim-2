@@ -3,6 +3,7 @@ package org.sunrin.sunrintemplate.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.EditText
 import org.sunrin.sunrintemplate.ApplicationUtilInit.Companion.popup
 import org.sunrin.sunrintemplate.ApplicationUtilInit.Companion.pref
 import org.sunrin.sunrintemplate.databinding.ActivitySignInBinding
@@ -21,25 +22,33 @@ class SignInActivity : AppCompatActivity() {
     private lateinit var userPw: String
     private val isRemembered: Boolean = pref.getBoolean("isRemembered", false)
 
-    private fun setUi(userId: String, userPw: String) {
+    private fun setUi(intentTo: Intent, userId: String, userPw: String) {
         with(binding) {
             if(isRemembered) {
                 etId.setText(userId)
                 etPw.setText(userPw)
                 cbRememberMe.toggle()
             }
-            else if(userId != "")
+            else if(intentTo.getBooleanExtra("isSignUp", false))
                 etId.setText(userId)
+            else {
+                etId.setText("")
+                etPw.setText("")
+            }
         }
+    }
+
+    private fun notMatch(et: EditText, s: String) {
+        popup.snackbar(binding.root, s)
+        et.error = s
     }
 
     private fun signIn(intentTo: Intent, userId: String, userPw: String) {
         with(binding) {
-            val id: String = etId.text.toString()
-            val pw: String = etPw.text.toString()
-            var errorMsg: String = ""
-
             btnSignIn.setOnClickListener() {
+                val id: String = etId.text.toString()
+                val pw: String = etPw.text.toString()
+
                 if(id != "" && id == userId) {
                     if(pw != "" && pw == userPw) {
                         if(cbRememberMe.isChecked)
@@ -51,15 +60,11 @@ class SignInActivity : AppCompatActivity() {
                         startActivity(intentTo)
                     }
                     else {
-                        errorMsg = "password does not match"
-                        popup.snackbar(binding.root, errorMsg)
-                        etPw.error = errorMsg
+                        notMatch(etPw, "password does not match")
                     }
                 }
                 else {
-                    errorMsg = "id does not match"
-                    popup.snackbar(binding.root, errorMsg)
-                    etId.error = errorMsg
+                    notMatch(etId, "id does not match")
                 }
             }
         }
@@ -79,7 +84,7 @@ class SignInActivity : AppCompatActivity() {
         userId = intentSignUp.getStringExtra("userId") ?: pref.getString("userId", "").toString()
         userPw = pref.getString("userPw", "").toString()
 
-        setUi(userId, userPw)
+        setUi(intentSignUp, userId, userPw)
 
         signIn(intentMain, userId, userPw)
         signUp(intentSignUp)
