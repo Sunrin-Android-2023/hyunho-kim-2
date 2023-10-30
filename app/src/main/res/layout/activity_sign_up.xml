@@ -10,6 +10,6 @@
     android:paddingHorizontal="30dp"
     android:paddingVertical="40dp"
 
-    tools:context=".MainActivity">
+    tools:context=".SignUpActivity">
 
 </LinearLayout>

@@ -2,14 +2,14 @@ package org.sunrin.sunrintemplate
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import org.sunrin.sunrintemplate.databinding.ActivityMainBinding
+import org.sunrin.sunrintemplate.databinding.ActivitySignInBinding
 
-class MainActivity : AppCompatActivity() {
-    private var mBinding : ActivityMainBinding ?= null
-    private val binding  : ActivityMainBinding get() = requireNotNull(mBinding)
+class SignInActivity : AppCompatActivity() {
+    private var mBinding : ActivitySignInBinding ?= null
+    private val binding : ActivitySignInBinding get() = requireNotNull(mBinding)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mBinding = ActivityMainBinding.inflate(layoutInflater)
+        mBinding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
 
