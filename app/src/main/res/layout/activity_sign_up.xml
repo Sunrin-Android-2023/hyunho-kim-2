@@ -32,7 +32,7 @@
         app:startIconDrawable="@drawable/ic_person">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/id"
+            android:id="@+id/et_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
@@ -52,7 +52,7 @@
         app:startIconDrawable="@drawable/ic_person_pin">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nickname"
+            android:id="@+id/et_nickname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
@@ -74,7 +74,7 @@
         app:startIconDrawable="@drawable/ic_lock">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password"
+            android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
@@ -86,7 +86,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.checkbox.MaterialCheckBox
-        android:id="@+id/agree_to"
+        android:id="@+id/cb_agree_to"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -102,7 +102,7 @@
         android:layout_weight="1"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/sign_up"
+        android:id="@+id/btn_sign_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -119,7 +119,7 @@
         android:textColor="@color/dark_gray"/>
 
     <TextView
-        android:id="@+id/sign_in"
+        android:id="@+id/tv_sign_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
