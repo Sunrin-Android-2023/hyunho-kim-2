@@ -11,11 +11,27 @@
     tools:context=".main.home.HomeFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_friend"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:visibility="visible"
 
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_friend"/>
+
+    <TextView
+        android:id="@+id/tv_alert"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+
+        android:layout_gravity="center"
+        android:gravity="center"
+
+        android:text="you have no friends"
+        android:textSize="25sp"
+        android:textColor="@color/dark_gray"
+        android:textStyle="bold"/>
 
 </LinearLayout>
