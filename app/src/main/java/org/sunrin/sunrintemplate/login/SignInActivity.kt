@@ -57,7 +57,10 @@ class SignInActivity : AppCompatActivity() {
                             pref.setBoolean("isRemembered", false)
 
                         popup.toast("sign in success")
+
+                        intentTo.flags = Intent.FLAG_ACTIVITY_NO_HISTORY
                         startActivity(intentTo)
+                        finish()
                     }
                     else {
                         notMatch(etPw, "password does not match")
@@ -71,7 +74,9 @@ class SignInActivity : AppCompatActivity() {
     }
     private fun signUp(intentTo: Intent) {
         binding.tvSignUp.setOnClickListener() {
+            intentTo.flags = Intent.FLAG_ACTIVITY_NO_HISTORY
             startActivity(intentTo)
+            finish()
         }
     }
 

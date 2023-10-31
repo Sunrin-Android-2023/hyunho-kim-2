@@ -58,7 +58,10 @@ class SignUpActivity : AppCompatActivity() {
                                 popup.toast("sign up success")
                                 intentTo.putExtra("userId", id)
                                 intentTo.putExtra("isSignUp", true)
+                                intentTo.flags = Intent.FLAG_ACTIVITY_NO_HISTORY
+
                                 startActivity(intentTo)
+                                finish()
                             }
                             else {
                                 popup.snackbar(binding.root, "please agree with our privacy policy")
@@ -80,7 +83,9 @@ class SignUpActivity : AppCompatActivity() {
     }
     private fun signIn(intentTo: Intent) {
         binding.tvSignIn.setOnClickListener() {
+            intentTo.flags = Intent.FLAG_ACTIVITY_NO_HISTORY
             startActivity(intentTo)
+            finish()
         }
     }
 
