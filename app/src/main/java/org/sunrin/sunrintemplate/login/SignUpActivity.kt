@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
+import org.sunrin.sunrintemplate.ApplicationUtilInit.Companion.keyboard
 import org.sunrin.sunrintemplate.ApplicationUtilInit.Companion.popup
 import org.sunrin.sunrintemplate.ApplicationUtilInit.Companion.pref
 import org.sunrin.sunrintemplate.databinding.ActivitySignUpBinding
@@ -93,6 +94,8 @@ class SignUpActivity : AppCompatActivity() {
         super.onStart()
 
         val intentSignIn : Intent = Intent(this@SignUpActivity, SignInActivity::class.java)
+
+        keyboard.setupHideKeyboardOnBackgroundClick(this@SignUpActivity, binding.root)
 
         signUp(intentSignIn)
         signIn(intentSignIn)

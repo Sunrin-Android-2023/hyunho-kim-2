@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
+import org.sunrin.sunrintemplate.ApplicationUtilInit.Companion.keyboard
 import org.sunrin.sunrintemplate.ApplicationUtilInit.Companion.popup
 import org.sunrin.sunrintemplate.ApplicationUtilInit.Companion.pref
 import org.sunrin.sunrintemplate.databinding.ActivitySignInBinding
@@ -90,6 +91,8 @@ class SignInActivity : AppCompatActivity() {
         userPw = pref.getString("userPw", "").toString()
 
         setUi(intentSignUp, userId, userPw)
+
+        keyboard.setupHideKeyboardOnBackgroundClick(this@SignInActivity, binding.root)
 
         signIn(intentMain, userId, userPw)
         signUp(intentSignUp)
