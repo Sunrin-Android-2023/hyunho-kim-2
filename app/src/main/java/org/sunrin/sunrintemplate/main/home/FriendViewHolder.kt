@@ -1,7 +1,7 @@
 package org.sunrin.sunrintemplate.main.home
 
 import androidx.recyclerview.widget.RecyclerView
-import org.sunrin.sunrintemplate.data.Friend
+import org.sunrin.sunrintemplate.data.structure.Friend
 import org.sunrin.sunrintemplate.databinding.ItemFriendBinding
 
 class FriendViewHolder(private val binding: ItemFriendBinding): RecyclerView.ViewHolder(binding.root) {

@@ -1,4 +1,4 @@
-package org.sunrin.sunrintemplate.data
+package org.sunrin.sunrintemplate.data.structure
 
 import androidx.annotation.DrawableRes
 

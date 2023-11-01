@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import org.sunrin.sunrintemplate.R
-import org.sunrin.sunrintemplate.data.Friend
+import org.sunrin.sunrintemplate.data.structure.Friend
 import org.sunrin.sunrintemplate.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
