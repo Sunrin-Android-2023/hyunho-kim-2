@@ -12,5 +12,13 @@
 
     <string name="don_t_have_an_account">Don\'t have an account? Sign Up</string>
     <string name="already_have_an_account">Already have an account? Sign In</string>
+
     <string name="description">description</string>
+    <string name="follower">follower</string>
+    <string name="following">following</string>
+
+    <string name="zero">0</string>
+
+    <string name="profile_edit">Profile Edit</string>
+    <string name="my_room">My Room</string>
 </resources>
