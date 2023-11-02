@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.ConcatAdapter
+import org.sunrin.sunrintemplate.ApplicationUtilInit.Companion.pref
 import org.sunrin.sunrintemplate.R
 import org.sunrin.sunrintemplate.data.structure.Friend
 import org.sunrin.sunrintemplate.databinding.FragmentHomeBinding
@@ -42,9 +44,14 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val myAdapter = MyAdapter(requireContext())
         val friendAdapter = FriendAdapter(requireContext())
-        binding.rvFriend.adapter = friendAdapter
+        val homeAdapter = ConcatAdapter(myAdapter, friendAdapter)
+
         friendAdapter.setFriendList(mockFriendList)
+        myAdapter.setMyData(Friend(R.drawable.ic_sample, pref.getString("userNickname", "") ?: "", ""))
+
+        binding.rvFriend.adapter = homeAdapter
     }
 
     override fun onDestroyView() {

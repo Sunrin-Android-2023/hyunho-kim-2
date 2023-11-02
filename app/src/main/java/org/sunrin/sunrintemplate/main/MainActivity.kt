@@ -7,8 +7,8 @@ import org.sunrin.sunrintemplate.ApplicationUtilInit.Companion.popup
 import org.sunrin.sunrintemplate.R
 import org.sunrin.sunrintemplate.databinding.ActivityMainBinding
 import org.sunrin.sunrintemplate.main.account.AccountFragment
-import org.sunrin.sunrintemplate.main.feedback.FeedbackFragment
 import org.sunrin.sunrintemplate.main.home.HomeFragment
+import org.sunrin.sunrintemplate.main.world.WorldFragment
 
 class MainActivity : AppCompatActivity() {
     private var mBinding : ActivityMainBinding ?= null
@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
     fun clickBnv() {
         binding.bnvMain.setOnItemSelectedListener() {
             when(it.itemId) {
-                R.id.menu_feedback -> {
-                    replaceFragment(FeedbackFragment())
+                R.id.menu_world -> {
+                    replaceFragment(WorldFragment())
                     true
                 }
                 R.id.menu_home -> {
