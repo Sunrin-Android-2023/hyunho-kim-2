@@ -1,21 +1,21 @@
-package org.sunrin.sunrintemplate.main.feedback
+package org.sunrin.sunrintemplate.main.world
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import org.sunrin.sunrintemplate.databinding.FragmentFeedbackBinding
+import org.sunrin.sunrintemplate.databinding.FragmentWorldBinding
 
-class FeedbackFragment : Fragment() {
-    private var mBinding : FragmentFeedbackBinding ?= null
-    private val binding : FragmentFeedbackBinding get() = requireNotNull(mBinding)
+class WorldFragment : Fragment() {
+    private var mBinding : FragmentWorldBinding ?= null
+    private val binding : FragmentWorldBinding get() = requireNotNull(mBinding)
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        mBinding = FragmentFeedbackBinding.inflate(inflater, container, false)
+        mBinding = FragmentWorldBinding.inflate(inflater, container, false)
         return binding.root
     }
 

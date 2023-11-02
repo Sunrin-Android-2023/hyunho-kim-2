@@ -21,4 +21,8 @@
 
     <string name="profile_edit">Profile Edit</string>
     <string name="my_room">My Room</string>
+
+    <string name="world">World</string>
+    <string name="home">Home</string>
+    <string name="account">Account</string>
 </resources>

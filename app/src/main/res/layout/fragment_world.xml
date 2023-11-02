@@ -8,6 +8,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
 
-    tools:context=".main.feedback.FeedbackFragment">
+    tools:context=".main.world.WorldFragment">
 
 </LinearLayout>
