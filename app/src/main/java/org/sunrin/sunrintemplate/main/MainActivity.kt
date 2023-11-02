@@ -20,13 +20,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
-    private fun replaceFragment(fragment: Fragment) {
+    fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fcv_main, fragment)
             .commit()
     }
 
-    fun clickBnv() {
+    private fun clickBnv() {
         binding.bnvMain.setOnItemSelectedListener() {
             when(it.itemId) {
                 R.id.menu_world -> {

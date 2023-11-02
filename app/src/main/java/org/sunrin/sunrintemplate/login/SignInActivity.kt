@@ -25,13 +25,13 @@ class SignInActivity : AppCompatActivity() {
 
     private fun setUi(intentTo: Intent, userId: String, userPw: String) {
         with(binding) {
-            if(isRemembered) {
+            if(intentTo.getBooleanExtra("isSignUp", false))
+                etId.setText(userId)
+            else if(isRemembered) {
                 etId.setText(userId)
                 etPw.setText(userPw)
                 cbRememberMe.toggle()
             }
-            else if(intentTo.getBooleanExtra("isSignUp", false))
-                etId.setText(userId)
             else {
                 etId.setText("")
                 etPw.setText("")
